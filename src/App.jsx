@@ -1,16 +1,21 @@
-import OnSaleNow from "./components/onSaleNow"
-import ProductCard from "./components/produtCard"
-import UserData from "./components/userData"
+import { Route, Routes } from "react-router-dom";
+import Test from "./components/test"
+import AdminPage from "./pages/admin"
+import HomePage from "./pages/home";
+import LoginPage from "./pages/login";
+
 
 
 export default function App() {
   
 
   return (
-    <div className = "bg-blue-400 border-8 border-b-blue-900  "> {/* bg- type krla ctrl ekai space ekai gehuwma colors list ekak eno eken kemthi tika toragnna, index.css eke hadpu class me wage space thiya thiya dala me adala div eka customise krgnna puluwan */}
-      <UserData/>
-      <OnSaleNow/>
-    
+    <div className="w-full h-screen bg-amber-700">
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/admin/*" element={<AdminPage/>}/>
+      </Routes>
     </div>
   );
 }
