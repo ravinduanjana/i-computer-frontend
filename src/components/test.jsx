@@ -1,32 +1,49 @@
+import { useState } from "react"
+
 export default function Test(){
-
+    const [count,setCount] = useState(0)
+    const [isVisible,setIsvisible] = useState(true) 
     return(
-        <div className="w-[600px] h-[600px] border-4 "  >
-      <div className="w-[500px] h-[500px] border-4 bg-emerald-500 flex flex-col">
-        <div className="w-[75px] h-[75px] border-2 bg-amber-700">
-          
-        </div>
+       
+    <div className="w-full h-full bg-yellow-300 flex justify-center items-center ">
 
-        <div className="w-[75px] h-[75px] border-2 bg-blue-50 m-[20px] p-[10px]"> {/* m= margine watema inna ayth ekka 20 px durak pwthwa genima  padding p-[20px] padin ekekn wenee thamange boundry eka athule samana durkin content eka pawthwa genima*/}
+      <button 
+      onClick ={
+        ()=>{
+          setIsvisible(false)
+        }
+      } className="w-5 h-5 bg-accent"
+      >X</button>
 
-        </div>
+      <button 
+      onClick ={
+        ()=>{
+          setIsvisible(true)
+        }
+      } className="w-15 h-5 bg-pink-600  m-3"
+      >show</button>
 
-         <div className="w-[75px] h-[75px] border-2 bg-[#c71887]">
-          
-        </div>
 
-         <div className="w-[75px] h-[75px] border-2 bg-blue-400 m-[10px] ">
-          
-        </div>
+      {isVisible && <div className="w-[400px] h-[400px] bg-white flex items-center justify-center flex-col">
+        <h1 className="text-[55px] m-[100px]">{count}</h1>
+        <div className="w-full h-[50px] flex items-center justify-center gap-10">
+          <button onClick={
+            ()=>{
+              setCount(count -1)
+            }
+          } className="w-[100px] h-[45px] bg-red-600">
+            Decrement
+          </button>
 
-         <div className="w-[75px] h-[75px] border-2 bg-blue-900">
-          
+          <button onClick = {
+            ()=>{
+                setCount(count +1)
+            }
+          } className="w-[100px] h-[45px] bg-pink-400">Increment
+            </button>
         </div>
+      </div>}
 
-         <div className="w-[75px] h-[75px] border-2 bg-fuchsia-600 ml-[10px] mt-[20px] mb-[5px] mr-[5px] " > {/* margine hathra peththata values 4k dagnna nam mt , mb, ml, mr (left,top,bottom,right)  padding wlatath ehemai, pt,pl, pb, pr htara watete kemthi avalues denna puluwan*/}
-          
-        </div>
-      </div>
     </div>
     )
 }

@@ -71,14 +71,152 @@ export default function AdminPage(){
 * pixabay use this web site for download web sites, api professional web site ekak hdnwnm
 images pay krla gnna nethan free dena site ekakin ganna nethan legal prashna eno
 
+    <div className="w-[75px] h-[75px] border-2 bg-fuchsia-600 ml-[10px] mt-[20px] mb-[5px] mr-[5px] " >  margine hathra peththata values 4k dagnna nam mt , mb, ml, mr (left,top,bottom,right)  padding wlatath ehemai, pt,pl, pb, pr htara watete kemthi avalues denna puluwan
+
+div className="w-[75px] h-[75px] border-2 bg-blue-50 m-[20px] p-[10px]"> {/* m= margine watema inna ayth ekka 20 px durak pwthwa genima  padding p-[20px] padin ekekn wenee thamange boundry eka athule samana durkin content eka pawthwa genima
+
+ className="w-full h-[50px] border-4 flex items-center justify-center gap-10" gap-10 gap eken wenne div ekak atule thiyena dewal samana dukin align kirima
+
+
+pahatha code eken wenne decrement button eka click krddi value eka adu weno mekata return ekt udin count = 10 kiyla variable ekak hdgnna one. button wlat dala thiyena function eka hodt blagnna 
+
+export default function Test(){
+    let count = 10
+    return(
+       
+    <div className="w-full h-full bg-yellow-300 flex justify-center items-center ">
+      <div className="w-[400px] h-[400px] bg-white flex items-center justify-center flex-col">
+        <h1 className="text-[55px] m-[100px]">{count}</h1>
+        <div className="w-full h-[50px] flex items-center justify-center gap-10">
+          <button onClick={
+            ()=>{
+              count = count -1
+              console.log(count)
+            }
+          } className="w-[100px] h-[45px] bg-red-600">
+            Decrement
+          </button>
+
+          <button onClick = {
+            ()=>{
+              count = count +1 
+              console.log(count)
+            }
+          } className="w-[100px] h-[45px] bg-pink-400">Increment
+            </button>
+        </div>
+      </div>
+
+    </div>
+    )
+}
+
+types of hooks
+-useState
+-useEffect
+-useNavigate
+-useLocation
+-useGoogleLogin
+-useRef
+-useContext
+
+rules when useing hooks.
+1.hook must be begining the function
+ex- export default function App(){}
+useState()
+
+2.hook eka function ekakata 1kta wediyen danwnam okkoma eka piliwelat thiyenne ona
+wena mukuth condition danna be, eka piliwelat okkoma run wenna ona
+
+hook ekak dana widiya (useState import krgnna ona.)
+function ekat pahalin const [a,b] = useState() a= variable ekak, b= function ekak
+a varible ekat hema welema add venne useState() me warahan deka meda thiyena value eka
+
+-serin sere wenas wena values thiyenm ewata useState ekak dla liygnne
+ex- increment btn eka click krddi value eka wedi wenna ha decriment btn eka click krddi value eka aduwenna hadpu eka.
 
 
 
+me code eken thamai increment decrement component eka heduwe analyse the code and understand
+***const line ekai button 2i thamai hodtma blnna one thewa h1 ekai
 
+import { useState } from "react"
 
+export default function Test(){
+    const [count,setCount] = useState(0) 
+    return(
+       
+    <div className="w-full h-full bg-yellow-300 flex justify-center items-center ">
+      <div className="w-[400px] h-[400px] bg-white flex items-center justify-center flex-col">
+        <h1 className="text-[55px] m-[100px]">{count}</h1>
+        <div className="w-full h-[50px] flex items-center justify-center gap-10">
+          <button onClick={
+            ()=>{
+              setCount(count -1)
+            }
+          } className="w-[100px] h-[45px] bg-red-600">
+            Decrement
+          </button>
 
+          <button onClick = {
+            ()=>{
+                setCount(count +1) 
+            }
+          } className="w-[100px] h-[45px] bg-pink-400">Increment
+            </button>
+        </div>
+      </div>
 
+    </div>
+    )
+}
 
+pahatha code eken wenne sagala warahan deken ethule thiyena loku div eka x button eka click krama nethi wenna hdana eka. {isVisible && } meken ethule thiyena div kotasama
+mektath useState use wenne, isVisible kiyla variable ekai setIsvisible kiyna function ekai x button ekei thiyena code hodta blanna
 
+import { useState } from "react"
+
+export default function Test(){
+    const [count,setCount] = useState(0)
+    const [isVisible,setIsvisible] = useState(true) 
+    return(
+       
+    <div className="w-full h-full bg-yellow-300 flex justify-center items-center ">
+
+      <button 
+      onClick ={
+        ()=>{
+          setIsvisible(false)
+        }
+      } className="w-5 h-5 bg-accent"
+      >X</button>
+
+      {isVisible &&           <div className="w-[400px] h-[400px] bg-white flex items-center justify-center flex-col">
+       
+      <h1 className="text-[55px] m-[100px]">{count}</h1>
+        <div className="w-full h-[50px] flex items-center justify-center gap-10">
+          <button onClick={
+            ()=>{
+              setCount(count -1)
+            }
+          } className="w-[100px] h-[45px] bg-red-600">
+            Decrement
+          </button>
+
+          <button onClick = {
+            ()=>{
+                setCount(count +1)
+            }
+          } className="w-[100px] h-[45px] bg-pink-400">Increment
+            </button>
+        </div>
+      </div>                }
+
+    </div>
+    )
+}
+
+okatama thawa button ekak (show) dala ekatath x button ekema settings dala false eka true krma
+ara hide wena eka show krgn puluwan.
 
 */
