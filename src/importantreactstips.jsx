@@ -219,4 +219,7 @@ export default function Test(){
 okatama thawa button ekak (show) dala ekatath x button ekema settings dala false eka true krma
 ara hide wena eka show krgn puluwan.
 
+
+onClick = e btn eka ho link eka ho click krma wenna ona de kiyanna use krai.
+
 */
