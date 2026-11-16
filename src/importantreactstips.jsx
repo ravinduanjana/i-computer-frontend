@@ -222,4 +222,6 @@ ara hide wena eka show krgn puluwan.
 
 onClick = e btn eka ho link eka ho click krma wenna ona de kiyanna use krai.
 
+input panel hema ekaktama usestate ekak enna ona web site ekadid
+
 */

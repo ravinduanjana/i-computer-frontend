@@ -40,6 +40,9 @@ export default function LoginPage(){
             
             console.log(response)
             toast.success("login successful")
+
+            localStorage.setItem("token" , response.data.token) //local storage eke user successful login token eka save krgnno, wena wena weda wlt ona wena nisa.
+
             if (response.data.role == "admin"){
                 //window.location.href = "/admin/" me line ekenuth navigta wenna puliwn but not professional, uda logo eka refresh wela wage yano penne ekanisa use navigate hook eka use krai, function ekt phalin useNavigate hook eka liuwa, methana use navigate eka call kra ( navigate("/admin/") ), meken ona thenakta yanna puluwan.
               navigate("/admin/")          
@@ -47,9 +50,9 @@ export default function LoginPage(){
                navigate("//") //send to home page
             }
 
-            } catch(error){
-                console.log(error)
-                toast.error("login failed")
+            } catch(err){
+                
+                toast.error(err?.response?.data?.message || "fail to login" ); 
             }
         }
 
