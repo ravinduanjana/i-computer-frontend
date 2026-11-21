@@ -224,4 +224,31 @@ onClick = e btn eka ho link eka ho click krma wenna ona de kiyanna use krai.
 
 input panel hema ekaktama usestate ekak enna ona web site ekadid
 
+useEffect( function ,[]); // useEffect eken wenne apita ona function ekak eka prak run krgnna withrak nam e function eka useeffect eka atule function kiyn thena liyano
+
+site ekata image upload krnna superbase site eka use krai, git hub eken sign wela project ekak create krnna pw ekt kemthi ekak denna issarhta one wenne ne eka, project eka athule setting wala data api wala http wlin ptn gnna url ekai, https://onewzsvlrvqvonnhfeaq.supabase.co/rest/v1/     api keys wala view legacy anon key wala anon public url eka copy krgnnna   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9uZXd6c3ZscnZxdm9ubmhmZWFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ4NTc1NjksImV4cCI6MjExMDQzMzU2OX0.4aSkSqUpNrocyiDTdHvGMF1DhMzb9bwut7fk2mYnwyk
+itpse storage wala create bucket, image kiyla nama dila aniwren public tick krnna, itpse policies wala new policy, for full custamization, give policy name as key tick selece delete update add 4 options and save create policy
+
+
+
+
+ <div className="w-full h-full bg-yellow-300 flex justify-center items-center ">
+    
+      <input type="file" onChange={
+        (e)=>{
+          console.log(e.target.files[0])
+        }
+      } />
+    
+    </div>  me line eken apit file ekak select krla upload krnna puluwan image upload weddi wedagath weno
+
+
+
+supabase ekat image upload krgnna supabase library eka install krgnna.
+npm install @supabase/supabase-js
+
+
+
+
 */
+

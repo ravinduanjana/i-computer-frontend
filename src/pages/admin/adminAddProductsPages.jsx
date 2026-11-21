@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import uploadFile from "../../utils/mediaUpload";
 
 
 
@@ -18,6 +19,7 @@ export default function AdminAddProductsPage(){
     const [brand, setBrand]=useState("Generic");
     const [model, setModel]=useState("");
     const [isVisible, setIsVisible ]=useState("true");
+    const [files, setFiles ] = useState([]); //images upload krnna empty array ekak demme images godk upload krnna  
     const navigate=useNavigate();
     
             //hema input and textarea panel ekakatama value eka dagnna one. usestate walin eka value eka name, productId
@@ -34,6 +36,16 @@ export default function AdminAddProductsPage(){
                     
                     
                     }   
+                    const fileUploadPromises = [];
+                    // for loop eken wenne i wala agya files ganata samana wenakn me loop eka run weno.
+                    for(let i = 0 ; i< files.length ; i++){
+                        
+                        fileUploadPromises[i] = uploadFile(files[i])
+                    }
+
+                    const imageURLs = await Promise.all(fileUploadPromises); //ekapara promises godak run krganna widiya
+
+                    
             
                 
                 await axios.post(import.meta.env.VITE_API_URL + "/products/add-product",{
@@ -44,6 +56,7 @@ export default function AdminAddProductsPage(){
                     price: price,
                     labelledPrice: labelledPrice,
                     altName: altName.split(","), // altname coma eken wen kra kra gahanne api eth mekata e string value eka split krna one koma eken wen wena wachana (",") oya code kellen eka kiynne, coma eken wen wela thiyena wachana wena wenama dala array ekak hdala product eka hdano.
+                    images: imageURLs,
                     category: category,
                     brand: brand,
                     model: model,
@@ -82,10 +95,18 @@ export default function AdminAddProductsPage(){
             </div>
 
 
-            <div className="w-full h-[190px] flex flex-col">
+            <div className="w-full h-[140px] flex flex-col">
                 <label className="font-bold ml-2">Description</label>
                 <textarea value={description} onChange ={(e)=>{setDescription(e.target.value)}} placeholder="Ex: Laptop" className="border-2 border-accent rounded-[10px] h-[100px] p-2 m-2 focus:outline-none "></textarea> {/* description wage godak liynna thiyena ewta input tag newei text area use krnna, enter gagaha word wage line break krnna puluwan ewa,  */}
             </div>
+             
+
+             <div className="w-[25%] h-[100px] flex flex-col">
+                <label className="font-bold ml-2">Images</label>
+                 <input multiple type="file" onChange ={(e)=>{setFiles(e.target.files)}} className="border-2 border-accent rounded-[10px] h-[35px] p-2 m-2 focus:outline-none "></input> 
+            {/*multiple type kiyla deme file ekakata wada upload krn nisa*/}
+             </div>
+
 
             
             <div className="w-full h-[100px] flex flex-col">
