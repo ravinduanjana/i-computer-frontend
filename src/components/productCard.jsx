@@ -21,7 +21,7 @@ export default function ProductCard(props){
                     <p className="text-red-500 text-sm line-through opacity-60 ">{product.labelledPrice.toFixed(2)}</p>
                 }
 
-                <p className="text-md font-boldw">{product.price.toFixed(2)}</p>
+                <p className="text-md font-bold">{product.price.toFixed(2)}</p>
 
             </div>
         

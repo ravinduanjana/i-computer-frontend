@@ -26,8 +26,27 @@ export default function AdminAddProductsPage(){
 
             async function handleAddProduct(){
                 try{//me function eka heduwe product create krnna, url eka .env file eken ganne url eke mul tika, json ekak atule product eke details dala product eka bend ekt dala product create krno
+                    
+                    if(files.length > 5){
+                        toast.error("you can upload maximum 5 images");
+                        return;
+                    }
+                    if(productId == ""){
+                        toast.error("product name cannot be empty");
+                        return;
+                    }
+
                 
-                
+                    if(name == ""){
+                        toast.error("product name cannot be empty");
+                        return;
+                    }
+
+                    if(description == ""){
+                        toast.error("product description cannot be empty");
+                        return;
+                    }
+
                    const token= localStorage.getItem("token"); // product createn krnna puluwan admint witrai adminta unth product kreate krnna token eka one, ape browser eke localstorage eke save wela thiyena token eka methanta argnna one eka nisa. 
                     if(token==null){
                         toast.error("you must be login to add product"); 
