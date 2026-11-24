@@ -61,7 +61,7 @@ export default function LoginPage(){
            
             <div className="w-[50%] h-full flex justify-center items-center flex-col">
                 <img src="logo.png" className="w-[800px] object-cover "/>
-                <h1 className="text-4xl font-bold mt-5 text-acc">Ravindu computers</h1>
+                <h1 className="text-4xl font-bold mt-5 text-acc">Ra</h1>
             </div>
            
             <div className="w-[50%] h-full flex justify-center items-center">

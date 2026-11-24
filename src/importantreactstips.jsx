@@ -247,8 +247,8 @@ itpse storage wala create bucket, image kiyla nama dila aniwren public tick krnn
 supabase ekat image upload krgnna supabase library eka install krgnna.
 npm install @supabase/supabase-js
 
+className="cursor-pointer"  adala thenapa pointer eka genichama cursor eka atha wage wenas weno
 
-
-
+border-b-transparent //border bottom eka transparent krgnnata
 */
 

@@ -1,3 +1,7 @@
+
+
+
+//use for image uploading process
 import { useState } from "react"
 import uploadFile from "../utils/mediaUpload"
 
@@ -32,4 +36,7 @@ export default function Test(){
     
     </div>
     )
-}
+} 
+
+
+
