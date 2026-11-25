@@ -250,5 +250,23 @@ npm install @supabase/supabase-js
 className="cursor-pointer"  adala thenapa pointer eka genichama cursor eka atha wage wenas weno
 
 border-b-transparent //border bottom eka transparent krgnnata
+
+cart eka hdaddi cart eke data array ekak wage thiyena nisa eka string krnna ona, local storage eke save krnna puluwn string witrk nisa, aith local storage eken web siite ekta gannakota string eka aith array ekakta convert krla gnna
+
+h-[150px] aspect-square = usta hriyana widiyta palala hdgnno samachthursryak image wlat use krnna
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
 

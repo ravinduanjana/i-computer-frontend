@@ -9,7 +9,7 @@ export default function ImageSlideShow(props){
         if(index===activeImage){
         return "w-[100px] h-[100px] object-fill rounded-[10px] border-4 border-secondary cursor-pointer"
     } else {
-        return "w-[100px] h-[100px] object-fill rounded-[10px] border-4 border-accent cursor-pointer"
+        return "w-[100px] h-[100px] object-fill rounded-[10px] border-2 border-accent cursor-pointer"
     }
 }
 

@@ -235,12 +235,12 @@ export default function AdminProductsPage() {
                                         </td>
 
                                         <td className="px-3 py-1 text-xs font-semibold text-slate-700 whitespace-nowrap">
-                                            Rs. {Number(item.price).toLocaleString()}
+                                            LKR {Number(item.price).toLocaleString()}
                                         </td>
 
                                         <td className="px-3 py-1 text-xs text-slate-400 whitespace-nowrap">
                                             <span className="line-through">
-                                                Rs. {Number(item.labelledPrice).toLocaleString()}
+                                                LKR {Number(item.labelledPrice).toLocaleString()}
                                             </span>
                                         </td>
 

@@ -12,7 +12,7 @@ export default function AdminAddProductsPage(){
     const [name, setName] =useState(""); 
     const [productId, setProductId]=useState("");
     const [description, setDescription]=useState("");
-    const [altName, setAltName]=useState("");
+    const [AltName, setAltName]=useState("");
     const [price, setPrice]=useState("");
     const [labelledPrice, setLabelledPrice]=useState("");
     const [category, setCategory]=useState("");
@@ -74,7 +74,7 @@ export default function AdminAddProductsPage(){
                     description: description,
                     price: price,
                     labelledPrice: labelledPrice,
-                    altName: altName.split(","), // altname coma eken wen kra kra gahanne api eth mekata e string value eka split krna one koma eken wen wena wachana (",") oya code kellen eka kiynne, coma eken wen wela thiyena wachana wena wenama dala array ekak hdala product eka hdano.
+                    AltName: AltName.split(","), // altname coma eken wen kra kra gahanne api eth mekata e string value eka split krna one koma eken wen wena wachana (",") oya code kellen eka kiynne, coma eken wen wela thiyena wachana wena wenama dala array ekak hdala product eka hdano.
                     images: imageURLs,
                     category: category,
                     brand: brand,
@@ -130,7 +130,7 @@ export default function AdminAddProductsPage(){
             
             <div className="w-full h-[100px] flex flex-col">
                 <label className="font-bold ml-2">Alternative Names(comma separated)</label>
-                <input value={altName} onChange ={(e)=>{setAltName(e.target.value)}} placeholder="Ex:Laptop, Note Book, Portable Computer" className="border-2 border-accent rounded-[10px] h-[30px] p-2 m-2 focus:outline-none "></input> {/* description wage godak liynna thiyena ewta input tag newei text area use krnna, enter gagaha word wage line break krnna puluwan ewa,  */}
+                <input value={AltName} onChange ={(e)=>{setAltName(e.target.value)}} placeholder="Ex:Laptop, Note Book, Portable Computer" className="border-2 border-accent rounded-[10px] h-[30px] p-2 m-2 focus:outline-none "></input> {/* description wage godak liynna thiyena ewta input tag newei text area use krnna, enter gagaha word wage line break krnna puluwan ewa,  */}
             </div>
            
             <div className="w-[50%] h-[100px] flex flex-col">

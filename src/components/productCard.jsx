@@ -18,10 +18,10 @@ export default function ProductCard(props){
                 <h1 className="font-semibold text-lg ">{product.name}</h1>
                 {
                     product.labelledPrice > product.price &&
-                    <p className="text-red-500 text-sm line-through opacity-60 ">{product.labelledPrice.toFixed(2)}</p>
+                    <p className="text-red-500 text-sm line-through opacity-60 ">Rs: {product.labelledPrice.toFixed(2)}</p>
                 }
 
-                <p className="text-md font-bold">{product.price.toFixed(2)}</p>
+                <p className="text-md font-bold">Rs: {product.price.toFixed(2)}</p>
 
             </div>
         

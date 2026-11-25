@@ -14,7 +14,7 @@ export default function AdminUpdateProductsPage(){
     const [name, setName] =useState(location.state.name); 
     const [productId, setProductId]=useState(location.state.productId);
     const [description, setDescription]=useState(location.state.description);
-    const [altName, setAltName]=useState(location.state.AltName.join(",")); // altname tika comma walin wen krla thiyenna ona nisa nehema denna.
+    const [AltName, setAltName]=useState(location.state.AltName.join(",")); // altname tika comma walin wen krla thiyenna ona nisa nehema denna.
     const [price, setPrice]=useState(location.state.price);
     const [labelledPrice, setLabelledPrice]=useState(location.state.labelledPrice);
     const [category, setCategory]=useState(location.state.category);
@@ -57,9 +57,9 @@ export default function AdminUpdateProductsPage(){
                     description: description,
                     price: price,
                     labelledPrice: labelledPrice,
-                    altName: altName.split(","), // altname coma eken wen kra kra gahanne api eth mekata e string value eka split krna one koma eken wen wena wachana (",") oya code kellen eka kiynne, coma eken wen wela thiyena wachana wena wenama dala array ekak hdala product eka hdano.
+                    AltName: AltName.split(","), // altname coma eken wen kra kra gahanne api eth mekata e string value eka split krna one koma eken wen wena wachana (",") oya code kellen eka kiynne, coma eken wen wela thiyena wachana wena wenama dala array ekak hdala product eka hdano.
                     images: imageURLs,
-                    category: category,
+                    category: category, 
                     brand: brand,
                     model: model,
                     isVisible: isVisible === "true"
@@ -113,7 +113,7 @@ export default function AdminUpdateProductsPage(){
             
             <div className="w-full h-[100px] flex flex-col">
                 <label className="font-bold ml-2">Alternative Names(comma separated)</label>
-                <input value={altName} onChange ={(e)=>{setAltName(e.target.value)}} placeholder="Ex:Laptop, Note Book, Portable Computer" className="border-2 border-accent rounded-[10px] h-[30px] p-2 m-2 focus:outline-none "></input> {/* description wage godak liynna thiyena ewta input tag newei text area use krnna, enter gagaha word wage line break krnna puluwan ewa,  */}
+                <input value={AltName} onChange ={(e)=>{setAltName(e.target.value)}} placeholder="Ex:Laptop, Note Book, Portable Computer" className="border-2 border-accent rounded-[10px] h-[30px] p-2 m-2 focus:outline-none "></input> {/* description wage godak liynna thiyena ewta input tag newei text area use krnna, enter gagaha word wage line break krnna puluwan ewa,  */}
             </div>
            
             <div className="w-[50%] h-[100px] flex flex-col">
