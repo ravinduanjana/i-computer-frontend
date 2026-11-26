@@ -60,7 +60,7 @@ export function Cart(){
             }
             <div className="bg-white w-[600px] h-[40px] sticky bottom-0 rounded-xl shadow flex items-center">
                 <Link state={cart} to="/checkout"  className="bg-blue-500 font-bold text-secondary px-4 py-1 rounded ml-3 hover:bg-accent/80 hover:text-white">Checkout</Link>
-                 <spam className="text-lg font-bold text-secondary absolute right-5 border-b-4 border-double">{getFormattedPrice(getCartTotal(cart))}</spam>
+                 <span className="text-lg font-bold text-secondary absolute right-5 border-b-4 border-double">{getFormattedPrice(getCartTotal(cart))}</span>
                
             </div>
             </div>

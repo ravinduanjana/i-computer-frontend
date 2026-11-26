@@ -3,7 +3,7 @@ import Header from "../components/header";
 import ProductPage from "../pages/productPage"
 import OverView from "./overView";
 import { Cart } from "./cart";
-import { Checkout } from "./checkout";
+import Checkout from "./checkout";
 
 
 export default function HomePage(){

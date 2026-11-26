@@ -2,9 +2,11 @@
 
 @theme{
 
-    --color-primary: #d4f0fc;
+     --color-primary: #d4f0fc;
     --color-secondary: #01303f;
     --color-accent: #02a9f7;
+
+    
 }
 /* Transparent scroll track class called hide-scroll-track */
 
@@ -17,7 +19,8 @@
 }
 
 .hide-scroll-track::-webkit-scrollbar-thumb {
-    background-color: #02a9f7; /* color of the scroll thumb */
+    background-color: #02a9f7 ; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 3px solid transparent; /* creates padding around scroll thumb */
 }
+

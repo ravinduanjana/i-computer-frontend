@@ -5,8 +5,7 @@ import { Link, useParams } from "react-router-dom"
 import LoadingAnimation from "../components/loadingAnimation";
 import ImageSlideShow from "../components/imageSlideShow";
 import { addToCart, GetCart } from "../utils/cart";
-import { Checkout } from "./checkout";
-
+//import { Checkout } from "./checkout";
 
 export default function OverView(){
     const params = useParams();
