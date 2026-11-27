@@ -6,6 +6,7 @@ import AdminProductsPage from "./admin/adminProductsPage";
 import AdminAddProductsPage from "./admin/adminAddProductsPages";
 import AdminUpdateProductsPage from "./admin/adminUpdateProductsPage";
 import ProductPage from "./productPage";
+import AdminOrdersPage from "./admin/adminOrdersPage";
 
 
 
@@ -29,7 +30,7 @@ export default function AdminPage(){
             <div className="w-[calc(100%-200px)] h-full border-8 border-accent rounded-[20px] bg-primary p-3">
 
                 <Routes>
-                    <Route path="/"  element={<h1>orders page</h1>}/>
+                    <Route path="/"  element={<AdminOrdersPage/>}/>
                     <Route path="/products" element={<AdminProductsPage/>}/>
                     <Route path="/users" element={<h1>users page</h1>}/>
                     <Route path="/add-product" element={<AdminAddProductsPage/>}/>
